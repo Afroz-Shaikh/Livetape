@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "248709043345",
+    "project_id": "live-tape",
+    "storage_bucket": "live-tape.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:248709043345:android:f1efea29a0e7de02325b30",
+        "android_client_info": {
+          "package_name": "com.afroz.livetape"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "248709043345-plme76ekbmv80ru1784vt4j1oe6lbdar.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.afroz.livetape",
+            "certificate_hash": "8bd9247896200f02b1fece4b0caa0ce5e1af57a5"
+          }
+        },
+        {
+          "client_id": "248709043345-7qs1ilkcnn6k27pnad3cbf9d5blvrj4a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAtkC0jPo6oNqePpPcx-blKwCcxPG4W1lg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "248709043345-7qs1ilkcnn6k27pnad3cbf9d5blvrj4a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
