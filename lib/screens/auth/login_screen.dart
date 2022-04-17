@@ -11,7 +11,7 @@ class LoginScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: AppColors.primaryBlue,
+        backgroundColor: AppColors.backgroun,
         body: Container(
           width: double.infinity,
           child: Padding(
@@ -38,7 +38,7 @@ class LoginScreen extends StatelessWidget {
                 ),
                 Image.asset('assets/images/art01.png'),
                 appButton(
-                  text: 'Login',
+                  text: 'Login With Google',
                   onClick: () {
                     _authController.signinWithGoogle();
                     Navigator.of(context).push(

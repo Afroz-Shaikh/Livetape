@@ -5,6 +5,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:livetape/controllers/auth_controller.dart';
 import 'package:livetape/screens/auth/login_screen.dart';
 import 'package:livetape/screens/home_screen.dart';
+import 'package:livetape/screens/loading_screen.dart';
+import 'package:livetape/screens/main_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -26,7 +28,6 @@ class MyApp extends StatelessWidget {
       minTextAdapt: true,
       builder: (context) => MaterialApp(
         debugShowCheckedModeBanner: false,
-        title: 'Flutter Demo',
         theme: ThemeData(
           brightness: Brightness.dark,
           fontFamily: GoogleFonts.montserrat().fontFamily,
@@ -40,7 +41,9 @@ class MyApp extends StatelessWidget {
               );
             }
             if (snapshot.hasData) {
-              return HomeScreen();
+              return LoadScreen();
+            } else {
+              return LoginScreen();
             }
             return LoginScreen();
           },

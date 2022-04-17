@@ -37,9 +37,10 @@ class _NewCallScreenState extends State<NewCallScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.backgroun,
       appBar: AppBar(
         elevation: 0,
-        backgroundColor: AppColors.primaryBlue,
+        backgroundColor: AppColors.backgroun,
         title: Text('Join a  meeting'),
         centerTitle: true,
       ),
@@ -48,39 +49,48 @@ class _NewCallScreenState extends State<NewCallScreen> {
           SizedBox(
             height: 10,
           ),
-          TextField(
-            controller: meetingID,
-            keyboardType: TextInputType.number,
-            maxLines: 1,
-            decoration: InputDecoration(
-                filled: true,
-                // fillColor: AppColors.clearBlack.withOpacity(0.3),
-                fillColor: Colors.blueGrey,
-                hintText: 'Room ID',
-                contentPadding: EdgeInsets.all(20),
-                hintStyle: TextStyle(color: Colors.black)),
-            textAlign: TextAlign.center,
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 22.0),
+            child: TextField(
+              controller: meetingID,
+              keyboardType: TextInputType.number,
+              maxLines: 1,
+              decoration: InputDecoration(
+                  filled: true,
+                  // fillColor: AppColors.clearBlack.withOpacity(0.3),
+                  fillColor: AppColors.clearBlack,
+                  hintText: 'Room ID',
+                  contentPadding: EdgeInsets.all(20),
+                  hintStyle: TextStyle(color: Colors.white)),
+              textAlign: TextAlign.center,
+            ),
           ),
           SizedBox(
             height: 18,
           ),
-          TextField(
-            controller: userID,
-            keyboardType: TextInputType.name,
-            maxLines: 1,
-            decoration: InputDecoration(
-                filled: true,
-                // fillColor: AppColors.clearBlack.withOpacity(0.3),
-                fillColor: Colors.blueGrey,
-                hintText: 'Username',
-                contentPadding: EdgeInsets.all(20),
-                hintStyle: TextStyle(color: Colors.black)),
-            textAlign: TextAlign.center,
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 22.0),
+            child: TextField(
+              controller: userID,
+              keyboardType: TextInputType.name,
+              maxLines: 1,
+              decoration: InputDecoration(
+                  filled: true,
+                  // fillColor: AppColors.clearBlack.withOpacity(0.3),
+                  fillColor: AppColors.clearBlack,
+                  hintText: 'Username',
+                  contentPadding: EdgeInsets.all(20),
+                  hintStyle: TextStyle(color: Colors.red)),
+              textAlign: TextAlign.center,
+            ),
           ),
           SizedBox(
             height: 18,
           ),
-          appButton(text: 'Join', onClick: _joinMeeting)
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 28.0),
+            child: appButton(text: 'Join', onClick: _joinMeeting),
+          )
         ],
       ),
     );

@@ -34,4 +34,10 @@ class AuthController {
       }
     } catch (e) {}
   }
+
+  // singOutwithGoogle() async {
+  //   try {
+
+  //   } catch (e) {}
+  // }
 }

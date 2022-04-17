@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:livetape/utils/styles.dart';
 
 class appButton extends StatelessWidget {
   final String text;
@@ -14,7 +15,7 @@ class appButton extends StatelessWidget {
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
             elevation: 2,
-            primary: Colors.black,
+            primary: AppColors.lightBlue,
             minimumSize: Size(double.infinity, 50),
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(15))),

@@ -37,31 +37,31 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: Color(0xffF6F6F6),
-        bottomNavigationBar: NavigationBarTheme(
-          data: NavigationBarThemeData(
-              iconTheme: MaterialStateProperty.all(
-                  IconThemeData(color: AppColors.primaryBlue)),
-              indicatorColor: AppColors.primaryBlue.withOpacity(0.5),
-              backgroundColor: AppColors.clearWhite.withOpacity(0.6),
-              labelTextStyle:
-                  MaterialStateProperty.all(TextStyle(color: Colors.black))),
-          child: NavigationBar(
-            selectedIndex: index,
-            onDestinationSelected: (index) =>
-                setState(() => this.index = index),
-            height: 80,
-            destinations: [
-              NavigationDestination(
-                  icon: Icon(Icons.headset_mic_outlined), label: 'Home'),
-              NavigationDestination(
-                  icon: Icon(Icons.schedule), label: 'Scheduke'),
-              NavigationDestination(
-                  icon: Icon(Icons.account_circle_sharp), label: 'Account'),
-              NavigationDestination(
-                  icon: Icon(Icons.settings), label: 'Settings'),
-            ],
-          ),
-        ),
+        // bottomNavigationBar: NavigationBarTheme(
+        //   data: NavigationBarThemeData(
+        //       iconTheme: MaterialStateProperty.all(
+        //           IconThemeData(color: AppColors.primaryBlue)),
+        //       indicatorColor: AppColors.primaryBlue.withOpacity(0.5),
+        //       backgroundColor: AppColors.clearWhite.withOpacity(0.6),
+        //       labelTextStyle:
+        //           MaterialStateProperty.all(TextStyle(color: Colors.black))),
+        //   child: NavigationBar(
+        //     selectedIndex: index,
+        //     onDestinationSelected: (index) =>
+        //         setState(() => this.index = index),
+        //     height: 80,
+        //     destinations: [
+        //       NavigationDestination(
+        //           icon: Icon(Icons.headset_mic_outlined), label: 'Home'),
+        //       NavigationDestination(
+        //           icon: Icon(Icons.schedule), label: 'Scheduke'),
+        //       NavigationDestination(
+        //           icon: Icon(Icons.account_circle_sharp), label: 'Account'),
+        //       NavigationDestination(
+        //           icon: Icon(Icons.settings), label: 'Settings'),
+        //     ],
+        //   ),
+        // ),
         body: screens[index]);
   }
 }
