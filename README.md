@@ -1,8 +1,12 @@
 # livetape
 
-A Video call app made with Flutter/Dart.
+<a href="https://flutter.dev/"><img alt="Flutter" src="https://img.shields.io/badge/Flutter-%2302569B.svg?style=flat&logo=Flutter&logoColor=white"></a>
+<a href="https://flutter.dev/"><img alt="Dart" src="https://img.shields.io/badge/dart-%230175C2.svg?style=for-the-badge&logo=dart&logoColor=white"></a>
+<a href="https://github.com/Afroz-Shaikh/ncovid19/blob/master/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/Afroz-Shaikh/ncovid19"></a>
 
-# Features
+A Video call/Conferencing app made with Flutter/Dart.
+
+# 🚀Features
 
 ## Google Authentication
 
@@ -10,7 +14,7 @@ A Video call app made with Flutter/Dart.
 
 ## Locked Room Calls
 
-# Installation
+# 💻Installation
 
 1. Download this project(you can also use git to clone this rep)
 2. Extract the files onto your system
