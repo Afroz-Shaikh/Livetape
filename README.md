@@ -1,6 +1,6 @@
 # livetape
 
-A video-conferencing app Made with Flutter and Dart.
+A Video call app made with Flutter/Dart.
 
 # Features
 
