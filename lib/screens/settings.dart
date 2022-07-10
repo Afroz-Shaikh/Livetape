@@ -177,3 +177,7 @@ class Tilewidget extends StatelessWidget {
     );
   }
 }
+
+Future<void> signOut() async {
+  await FirebaseAuth.instance.signOut();
+}
