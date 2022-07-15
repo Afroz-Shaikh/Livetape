@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:livetape/controllers/auth_controller.dart';
 import 'package:livetape/screens/home_screen.dart';
+import 'package:livetape/screens/loading_screen.dart';
 import 'package:livetape/screens/widget/button.dart';
 import 'package:livetape/utils/styles.dart';
 
 class LoginScreen extends StatelessWidget {
-  final AuthController _authController = AuthController();
+  // final AuthController _authController = AuthController();
+  final AuthController _authMethods = AuthController();
 
   @override
   Widget build(BuildContext context) {
@@ -39,10 +41,13 @@ class LoginScreen extends StatelessWidget {
                 Image.asset('assets/images/art01.png'),
                 appButton(
                   text: 'Login With Google',
-                  onClick: () {
-                    _authController.signinWithGoogle();
-                    Navigator.of(context).push(
-                        MaterialPageRoute(builder: (context) => HomeScreen()));
+                  onClick: () async {
+                    bool res = await _authMethods.signinWithGoogle(context);
+                    if (res) {
+                      Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => LoadScreen()));
+                    }
+                    // _authController.signinWithGoogle();
                   },
                 )
               ],

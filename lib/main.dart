@@ -4,9 +4,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:livetape/controllers/auth_controller.dart';
 import 'package:livetape/screens/auth/login_screen.dart';
-import 'package:livetape/screens/home_screen.dart';
+
 import 'package:livetape/screens/loading_screen.dart';
-import 'package:livetape/screens/main_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -26,7 +25,7 @@ class MyApp extends StatelessWidget {
         926,
       ),
       minTextAdapt: true,
-      builder: (context) => MaterialApp(
+      builder: (context, child) => MaterialApp(
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
           brightness: Brightness.dark,

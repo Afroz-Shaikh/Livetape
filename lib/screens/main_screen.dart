@@ -101,7 +101,7 @@ class _MainViewState extends State<MainView> {
                               icon: Icons.add_box,
                             ),
                             SizedBox(
-                              width: 44.w,
+                              width: 30.w,
                             ),
                             ButtonContainer(
                               onClick: joinMeet,

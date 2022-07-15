@@ -13,6 +13,7 @@ class JitsiCOntroller {
       String username = ''}) async {
     try {
       FeatureFlag featureFlag = FeatureFlag();
+
       featureFlag.welcomePageEnabled = false;
       featureFlag.resolution = FeatureFlagVideoResolution
           .MD_RESOLUTION; // Limit video resolution to 360p

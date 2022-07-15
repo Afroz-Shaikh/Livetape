@@ -2,12 +2,19 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:livetape/controllers/auth_controller.dart';
 import 'package:livetape/screens/auth/login_screen.dart';
+import 'package:livetape/screens/delete_acc.dart';
 import 'package:livetape/utils/styles.dart';
 
-class SettingsPage extends StatelessWidget {
+class SettingsPage extends StatefulWidget {
   const SettingsPage({Key? key}) : super(key: key);
 
+  @override
+  State<SettingsPage> createState() => _SettingsPageState();
+}
+
+class _SettingsPageState extends State<SettingsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,6 +47,14 @@ class SettingsPage extends StatelessWidget {
             //   icon: Icons.person_outline_rounded,
             //   onClick: () {},
             // ),
+            Tilewidget(
+              title: 'Account Settings',
+              icon: Icons.person,
+              onClick: () {
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => DeleteAccountPage()));
+              },
+            ),
             Tilewidget(
               title: 'Support Developer',
               icon: Icons.support,
@@ -104,15 +119,11 @@ class SettingsPage extends StatelessWidget {
                                   //   }
                                   // },
                                   onPressed: () {
-                                    // FirebaseAuth.instance.signOut();
-                                    final snackBar = SnackBar(
-                                      backgroundColor: AppColors.lightBlue,
-                                      content: Text('Could not sign out '),
-                                      duration: Duration(seconds: 4),
-                                    );
-                                    ScaffoldMessenger.of(context)
-                                        .showSnackBar(snackBar);
-                                    Navigator.of(context).pop();
+                                    AuthController().singOutwithGoogle();
+                                    Navigator.of(context).push(
+                                        MaterialPageRoute(
+                                            builder: (context) =>
+                                                LoginScreen()));
                                   },
                                   child: Text('OK'))
                             ],
@@ -178,6 +189,7 @@ class Tilewidget extends StatelessWidget {
   }
 }
 
-Future<void> signOut() async {
-  await FirebaseAuth.instance.signOut();
-}
+// Future<void> signOut() async {
+//   print('what ?');
+//   await FirebaseAuth.instance.signOut();
+// }
